@@ -57,14 +57,14 @@ sudo mysql < sql/install.sql
 
 #WP CLI
     #Donwload WordPress
-wp --path=/var/www/html/${LOCATION} core download 
+(cd /var/www/html/${PATH}; wp core download)
 
     #Configure wordpress DB
 wp core config --path=/var/www/html/${LOCATION} --dbhost=localhost --dbname=wordpress --dbuser=${DB_USER} --dbpass=${DB_PW}
 
     #Chmod KA
 
-chmod 644 /var/www/${LOCATION}/wp-config.php
+chmod 644 /var/www/html/${LOCATION}/wp-config.php
 
     #Install WordPress
 wp core install --url=${URL} --title=${WP_Title} --admin_name=${WP_USER} --admin_password=${WP_PW} --admin_email=${WP_EMAIL}
