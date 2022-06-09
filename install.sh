@@ -57,7 +57,7 @@ sudo mysql < sql/install.sql
 
 #WP CLI
     #Donwload WordPress
-wp core download --path=/var/www/html/${LOCATION}
+wp --path=/var/www/html/${LOCATION} core download 
 
     #Configure wordpress DB
 wp core config --path=/var/www/html/${LOCATION} --dbhost=localhost --dbname=wordpress --dbuser=${DB_USER} --dbpass=${DB_PW}
