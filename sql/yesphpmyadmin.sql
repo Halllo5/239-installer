@@ -1,0 +1,1 @@
+GRANT all privileges ON *.* TO 'phpmyadmin'@'localhost';
