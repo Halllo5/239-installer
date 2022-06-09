@@ -16,7 +16,7 @@ echo "What shoud the FTP account be (default: websrv_user) "
 read USERNAME
 USERNAME="${USERNAME:=websrv_user}"
     #Gather User PW
-echo "What is the MySQL_DB User to use with the wordpress DB wich will be created (REQUIERD) "
+echo "What PAssword shoud the FTP Account have (has to be entert once again later |default: websrv_user) "
 read PW
 PW="${PW:=websrv_user}"
  #Install Prod FTP
