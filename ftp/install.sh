@@ -23,7 +23,7 @@ PW="${PW:=websrv_user}"
 AuthOrder mod_auth_file.c mod_auth_unix.c
 AuthUserFile /etc/proftpd/ftpd.passwd
 AuthPAM off
-RequireValidShell off") > /etc/proftpd/proftpd.conf
+RequireValidShell off") sudo > /etc/proftpd/proftpd.conf
 
 #Restart FTP 
 sudo /etc/init.d/proftpd restart
