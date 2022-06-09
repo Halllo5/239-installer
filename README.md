@@ -1,4 +1,4 @@
-# 239 Installer
+# 239 Installer
 
 239 Installer is a collection of simple scripts to install a wordpress site following the guidelines of [239 Module](https://bbz.macherit.ch/m239_main/).
 
@@ -20,4 +20,4 @@ chmod 777 installer239.sh
 
 ---
 
-#### This is not a complete or even good script, but I will try to improve things so that at least the available functions work
+#### This is not a complete or even good script, but I will try to improve things so that at least the available functions work
