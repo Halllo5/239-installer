@@ -21,9 +21,9 @@ fi
 #questions to get infos for the wordpress instance
     #Ask DB_USER
 echo "What is the MySQL_DB User to use with the wordpress DB wich will be created (REQUIERD) "
-read -p DB_USER
+read DB_USER
     #ASK PW For the DB_USER
-echo -s "What is the Password for the MySQL User (REQUIERD)"
+echo "What is the Password for the MySQL User (REQUIERD)"
 read DB_PW
   #Ask Wordpress Location 
 echo "what is the Location for the wordpress Site (/var/www/html/"what you need to enter") (default: wordpress)"
