@@ -33,7 +33,7 @@ sudo mysql < sql/nopolicy.sql
 read -p "Do you want to proceed? (yes/no) " yn
 
 case $yn in 
-	yes ) echo ok, we will proceed && apt-get install mcrypt && service apache2 restart && apt-get install phpmyadmin && chmod 777 wordpress/install.sh && chmod 777 wordpress/uninstall.sh && chmod 777 wordpress/reinstall.sh;;
+	yes ) echo ok, we will proceed && sudo apt-get install mcrypt && sudo service apache2 restart && sudo apt-get install phpmyadmin && chmod 777 wordpress/install.sh && chmod 777 wordpress/uninstall.sh && chmod 777 wordpress/reinstall.sh;;
 	no ) echo exiting... && chmod 777 wordpress/install.sh && chmod 777 wordpress/uninstall.sh && chmod 777 wordpress/reinstall.sh;
 		exit;;
 	* ) echo invalid response;
