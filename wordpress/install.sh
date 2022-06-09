@@ -61,8 +61,8 @@ sudo mysql < sql/install.sql
 
 #WP CLI
     #MKDIR LOCATION
-sudo chmod g+s /var/www
-sudo chmod 777 /var/www
+sudo chmod -R g+s /var/www
+sudo chmod -R 777 /var/www
 sudo mkdir /var/www/html/${LOCATION}
     #Donwload WordPress
 (cd /var/www/html/${LOCATION}; wp core download)
