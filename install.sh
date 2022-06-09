@@ -57,17 +57,17 @@ sudo mysql < sql/install.sql
 
 #WP CLI
     #Donwload WordPress
-(cd /var/www/html/${PATH}; wp core download)
+(cd /var/www/html/${LOCATION}; wp core download)
 
     #Configure wordpress DB
-wp core config --path=/var/www/html/${LOCATION} --dbhost=localhost --dbname=wordpress --dbuser=${DB_USER} --dbpass=${DB_PW}
+(cd /var/www/html/${LOCATION}; wp core config --dbhost=localhost --dbname=wordpress --dbuser=${DB_USER} --dbpass=${DB_PW})
 
     #Chmod KA
 
-chmod 644 /var/www/html/${LOCATION}/wp-config.php
+sudo chmod 644 /var/www/html/${LOCATION}/wp-config.php
 
     #Install WordPress
-wp core install --url=${URL} --title=${WP_Title} --admin_name=${WP_USER} --admin_password=${WP_PW} --admin_email=${WP_EMAIL}
+(cd /var/www/html/${LOCATION}; wp core install --url=${URL} --title=${WP_Title} --admin_name=${WP_USER} --admin_password=${WP_PW} --admin_email=${WP_EMAIL})
 
 #Acces WordPress
 echo "Wordpress shoud be listening on http://$URL"
