@@ -56,11 +56,12 @@ WP_EMAIL="${WP_EMAIL:=changeme@example.com}"
 sudo mysql < sql/install.sql
 
 #WP CLI
+    #MKDIR LOCATION
+mkdir /var/www/html/${LOCATION}
     #Donwload WordPress
 (cd /var/www/html/${LOCATION}; wp core download)
 
     #Configure wordpress DB
-echo "${DB_USER} ${DB_PW}"
 (cd /var/www/html/${LOCATION}; wp core config --dbhost=localhost --dbname=wordpress --dbuser=${DB_USER} --dbpass=${DB_PW})
 
     #Chmod KA
