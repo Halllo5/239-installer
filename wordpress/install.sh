@@ -61,7 +61,7 @@ sudo mysql < sql/install.sql
 
 #WP CLI
     #MKDIR LOCATION
-mkdir /var/www/html/${LOCATION}
+sudo mkdir /var/www/html/${LOCATION}
     #Donwload WordPress
 (cd /var/www/html/${LOCATION}; wp core download)
 
