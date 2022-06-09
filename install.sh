@@ -60,6 +60,7 @@ sudo mysql < sql/install.sql
 (cd /var/www/html/${LOCATION}; wp core download)
 
     #Configure wordpress DB
+echo "${DB_USER} ${DB_PW}"
 (cd /var/www/html/${LOCATION}; wp core config --dbhost=localhost --dbname=wordpress --dbuser=${DB_USER} --dbpass=${DB_PW})
 
     #Chmod KA
