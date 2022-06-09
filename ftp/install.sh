@@ -16,8 +16,7 @@ PW="${PW:=websrv_user}"
  sudo apt install proftpd
 
  #Add User
- sudo ftpasswd --passwd ${PW} --name ${USERNAME} --gid 33 --uid 33 --home
-/var/www/ --shell /bin/false
+ sudo ftpasswd --passwd ${PW} --name ${USERNAME} --gid 33 --uid 33 --home /var/www/ --shell /bin/false
 
 #Edit cofig
 (sudo cat /etc/proftpd/proftpd.conf; echo "DefaultRoot ~
