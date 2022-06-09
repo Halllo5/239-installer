@@ -1,4 +1,6 @@
-§#Chck if MySQL and WordPress CLI is installed
+#!/bin/bash
+
+#Chck if MySQL and WordPress CLI is installed
 if ! command -v apache2 &> /dev/null
 then
     echo "Apache coud not be found let me try to install it"
@@ -33,8 +35,8 @@ sudo mysql < sql/nopolicy.sql
 read -p "Do you want to proceed? (yes/no) " yn
 
 case $yn in 
-	yes ) echo ok, we will proceed && sudo apt-get install mcrypt && sudo service apache2 restart && sudo apt-get install phpmyadmin && chmod 777 wordpress/install.sh && chmod 777 wordpress/uninstall.sh && chmod 777 wordpress/reinstall.sh;;
-	no ) echo exiting... && chmod 777 wordpress/install.sh && chmod 777 wordpress/uninstall.sh && chmod 777 wordpress/reinstall.sh;
+	yes ) echo ok, we will proceed && sudo apt-get install mcrypt && sudo service apache2 restart && sudo apt-get install phpmyadmin && chmod 777 wordpress/install.sh && chmod 777 wordpress/uninstall.sh && chmod 777 wordpress/reinstall.sh && ./wordpress/install.sh && chmod 777 ftp/install.sh && ./ftp/install.sh;;
+	no ) echo exiting... && chmod 777 wordpress/install.sh && chmod 777 wordpress/uninstall.sh && chmod 777 wordpress/reinstall.sh && ./wordpress/install.sh;
 		exit;;
 	* ) echo invalid response;
 		exit 1;;
