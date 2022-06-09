@@ -29,24 +29,14 @@ fi
 #Deactivate MySQL PW Policy
 sudo mysql < sql/nopolicy.sql
 
-read -p "Are you sure? " -n 1 -r
-echo  Install phpmyadmin
-if [[ !$REPLY =~ ^[Yy]$ ]]
-then
-chmod 777 wordpress/install.sh
-chmod 777 wordpress/uninstall.sh
-chmod 777 wordpress/reinstall.sh
-./wordpress/install.sh
-fi
 
-apt-get install mcrypt
+read -p "Do you want to proceed? (yes/no) " yn
 
-service apache2 restart
+case $yn in 
+	yes ) echo ok, we will proceed && apt-get install mcrypt && service apache2 restart && apt-get install phpmyadmin && chmod 777 wordpress/install.sh && chmod 777 wordpress/uninstall.sh && chmod 777 wordpress/reinstall.sh;;
+	no ) echo exiting... && chmod 777 wordpress/install.sh && chmod 777 wordpress/uninstall.sh && chmod 777 wordpress/reinstall.sh;
+		exit;;
+	* ) echo invalid response;
+		exit 1;;
+esac
 
-apt-get install phpmyadmin
-
-(cd /var/www/html; ln -s /usr/share/phpmyadmin)
-
-chmod 777 wordpress/install.sh
-chmod 777 wordpress/uninstall.sh
-chmod 777 wordpress/reinstall.sh
