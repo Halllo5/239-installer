@@ -53,7 +53,7 @@ read WP_EMAIL
 WP_EMAIL="${WP_EMAIL:=changeme@example.com}"
 
 #MySQL Install command
-mysql -h < sql/install.sql
+mysql < sql/install.sql
 
 #WP CLI
     #Donwload WordPress
