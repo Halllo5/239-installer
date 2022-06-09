@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Name of Script
+#https://patorjk.com/software/taag/#p=display&v=2&c=echo&f=ANSI%20Regular&t=239%20Installer
 echo "██████  ██████   █████      ██ ███    ██ ███████ ████████  █████  ██      ██      ███████ ██████  ";
 echo "     ██      ██ ██   ██     ██ ████   ██ ██         ██    ██   ██ ██      ██      ██      ██   ██ ";
 echo " █████   █████   ██████     ██ ██ ██  ██ ███████    ██    ███████ ██      ██      █████   ██████  ";
