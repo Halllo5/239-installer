@@ -30,8 +30,8 @@ RequireValidShell off") > /etc/proftpd/proftpd.conf
 sudo /etc/init.d/proftpd restart
 
 #Chmod Var WWW
-chmod g+s /var/www
-chmod 777 /var/www
+sudo chmod g+s /var/www
+sudo chmod 777 /var/www
 sudo /etc/init.d/proftpd restart
 
 
@@ -46,10 +46,10 @@ sudo sed -i '/ mod_tls_fscache.c /s/^/#/' /etc/proftpd/modules.conf
 sudo sed -i '/ mod_tls_shmcache.c /s/^/#/' /etc/proftpd/modules.conf
 
 #Cert Erstellen
-openssl req -x509 -newkey rsa:2048 -keyout /etc/ssl/private/proftpd.key -out /etc/ssl/certs/proftpd.crt -nodes -days 365
+sudo openssl req -x509 -newkey rsa:2048 -keyout /etc/ssl/private/proftpd.key -out /etc/ssl/certs/proftpd.crt -nodes -days 365
 
 #Add Config
-touch /etc/proftpd/conf.d/tls.conf
+sudo touch /etc/proftpd/conf.d/tls.conf
 (sudo cat /etc/proftpd/conf.d/tls.conf; echo "<IfModule mod_tls.c>
  TLSEngine on
  TLSLog /var/log/proftpd/tls.log
@@ -59,7 +59,7 @@ touch /etc/proftpd/conf.d/tls.conf
  TLSVerifyClient off
 TLSOptions NoSessionReuseRequired
  TLSRequired on
-</IfModule>") > sudo nano /etc/proftpd/conf.d/tls.conf
+</IfModule>") > /etc/proftpd/conf.d/tls.conf
 
 #Restart Service 
 sudo /etc/init.d/proftpd restart
