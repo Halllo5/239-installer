@@ -2,5 +2,5 @@
 
 #Uninstall Script
 ./uninstall.sh
-Install script
+#Install script
 ./install.sh
