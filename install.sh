@@ -20,10 +20,10 @@ fi
 
 #questions to get infos for the wordpress instance
     #Ask DB_USER
-echo What is the MySQL_DB User to use with the wordpress DB wich will be created (REQUIERD) 
+echo "What is the MySQL_DB User to use with the wordpress DB wich will be created (REQUIERD) "
 read -p DB_USER
     #ASK PW For the DB_USER
-echo -s What is the Password for the MySQL User (REQUIERD) 
+echo -s "What is the Password for the MySQL User (REQUIERD)"
 read DB_PW
   #Ask Wordpress Location 
 echo "what is the Location for the wordpress Site (/var/www/html/"what you need to enter") (default: wordpress)"
@@ -36,19 +36,19 @@ URL="${URL:=localhost}"
 URL="$URL/$LOCATION"
 
     #Ask Title for WP Site
-echo What shoud be the title of the WordPress Site (default: My_WP_Site) 
+echo "What shoud be the title of the WordPress Site (default: My_WP_Site)" 
 read WP_Title
 WP_Title="${WP_Title:=My_WP_Site}"
     #Ask for WordPress admin user
-echo What shoud be the username of the (default: admin)
+echo "What shoud be the username of the (default: admin)"
 read -p WP_USER
 WP_USER="${WP_USER:=admin}"
     #ASK for WordPress admin PW
-echo What shoud be the Passowrd for the WorpdPress admin user (default: admin)
+echo "What shoud be the Passowrd for the WorpdPress admin user (default: admin)"
 read -sp WP_PW
 WP_PW="${WP_PW:=admin}"
     #ASK for WordPress admin E-Mail
-echo What is the the E-Mail for the WordPress admin User(default: changeme@example.com)
+echo "What is the the E-Mail for the WordPress admin User(default: changeme@example.com)"
 read WP_EMAIL
 WP_EMAIL="${WP_EMAIL:=changeme@example.com}"
 
