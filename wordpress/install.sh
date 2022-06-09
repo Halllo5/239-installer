@@ -61,6 +61,8 @@ sudo mysql < ../sql/yesphpmyadmin.sql
 sudo chmod -R g+s /var/www
 sudo chmod -R 777 /var/www
 sudo mkdir /var/www/html/${LOCATION}
+sudo chmod -R g+s /var/www/html/${LOCATION}
+sudo chmod -R 777 /var/www/html/${LOCATION}
     #Donwload WordPress
 (cd /var/www/html/${LOCATION}; wp core download)
 
