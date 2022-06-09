@@ -30,7 +30,7 @@ fi
 sudo mysql < sql/nopolicy.sql
 
 read -p "Are you sure? " -n 1 -r
-echo    # (optional) move to a new line
+echo  Install phpmyadmin
 if [[$REPLY =~ ^[Yy]$ ]]
 then
 apt-get install mcrypt
@@ -41,7 +41,7 @@ apt-get install phpmyadmin
 
 (cd /var/www/html; ln -s /usr/share/phpmyadmin)
 fi
-chmod 777 /wordpress/install.sh
-chmod 777 /wordpress/uninstall.sh
-chmod 777 /wordpress/reinstall.sh
+chmod 777 wordpress/install.sh
+chmod 777 wordpress/uninstall.sh
+chmod 777 wordpress/reinstall.sh
 ./wordpress/install.sh
