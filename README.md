@@ -20,4 +20,4 @@ chmod 777 installer239.sh
 
 ---
 
-#### This is not a complete or even good script, but I will try to improve things so that at least the available functions work
+#### This is not a complete script, but I will try to improve things so that at least the available functions work
