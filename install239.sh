@@ -43,30 +43,16 @@ then
 
     exit
 fi
+#Install Apache
+(cd ..; ./apache/install.sh)
+#Install MySQL
+(cd ..; ./sql/install.sh)
+#Install PHP
+(cd ..; ./apache/php/install.sh)
+#Install the WP CLI
+(cd ..; ./wordpress/cli/install.sh) 
 
-#Chck if MySQL and WordPress CLI is installed
-if ! command -v apache2 &> /dev/null
-then
-    echo "Apache coud not be found let me try to install it"
-    (cd ..; ./apache/install.sh)
-fi
-if ! command -v mysql &> /dev/null
-then
-    echo "MySQL coud not be found let me try to install it"
-    (cd ..; ./sql/install.sh)
-fi
-if ! command -v php &> /dev/null
-then
-    echo "PHP coud not be found let me try to install it"
-    (cd ..; ./apache/php/install.sh)
-    
-fi
-if ! command -v wp &> /dev/null
-then
-    echo "WP CLI coud not be found let me try to install it"
-    (cd ..; ./wordpress/cli/install.sh)   
 
-fi
 #Deactivate MySQL PW Policy
 sudo mysql < sql/nopolicy.sql
 
