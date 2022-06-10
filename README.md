@@ -2,7 +2,7 @@
 
 239 Installer is a collection of simple scripts to install a wordpress site following the guidelines of [239 Module](https://bbz.macherit.ch/m239_main/).
 
-**FTP is not working at the moment**.
+**FTP is currently not encrypted**.
 
 To do this, you can simply clone the git repository and run `installer239.sh`
 

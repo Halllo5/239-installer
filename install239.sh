@@ -57,8 +57,8 @@ echo "!!! Do you want to install phpMyAdmin (Recomended) otherwies you will have
 read -p "Do you want to proceed? (yes/no) " yn
 
 case $yn in 
-	yes ) echo ok, we will proceed  && sudo apt-get install mcrypt && sudo service apache2 restart && sudo apt-get install phpmyadmin && chmod 777 wordpress/install.sh && chmod 777 wordpress/uninstall.sh && chmod 777 wordpress/reinstall.sh && ./wordpress/install.sh;;
-	no ) echo exiting...  && chmod 777 wordpress/install.sh && chmod 777 wordpress/uninstall.sh && chmod 777 wordpress/reinstall.sh && ./wordpress/install.sh;
+	yes ) echo ok, we will proceed && chmod 777 ftp/install.sh && sudo ./ftp/install.sh && sudo apt-get install mcrypt && sudo service apache2 restart && sudo apt-get install phpmyadmin && chmod 777 wordpress/install.sh && chmod 777 wordpress/uninstall.sh && chmod 777 wordpress/reinstall.sh && ./wordpress/install.sh;;
+	no ) echo Installing with advanced mode... && chmod 777 ftp/install.sh && sudo ./ftp/install.sh && chmod 777 wordpress/install.sh && chmod 777 wordpress/uninstall.sh && chmod 777 wordpress/reinstall.sh && ./wordpress/install.sh;
 		exit;;
 	* ) echo invalid response;
 		exit 1;;

@@ -9,6 +9,13 @@ echo "██         ██    ██          ██ ██   ████ █�
 echo "                                                                                                   ";
 echo "                                                                                                   ";
 
+# Make sure only root can run our script
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
+
+
 #Gather Info
 
     #Gather Username
@@ -34,7 +41,7 @@ AuthOrder mod_auth_file.c mod_auth_unix.c
 AuthUserFile /etc/proftpd/ftpd.passwd
 AuthPAM off
 RequireValidShell off"
-) > /etc/proftpd/proftpd.conf
+) >> /etc/proftpd/proftpd.conf
 
 #Restart FTP 
 sudo /etc/init.d/proftpd restart
