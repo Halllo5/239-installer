@@ -53,7 +53,7 @@ fi
 #Deactivate MySQL PW Policy
 sudo mysql < sql/nopolicy.sql
 
-echo "!!!vDo you want to install phpMyAdmin (Recomended) otherwies you will have to create a MySQL Account with all rights by yourself!!!"
+echo "!!! Do you want to install phpMyAdmin (Recomended) otherwies you will have to create a MySQL Account with all rights by yourself !!!"
 read -p "Do you want to proceed? (yes/no) " yn
 
 case $yn in 
