@@ -68,13 +68,12 @@ read WP_EMAIL
 WP_EMAIL="${WP_EMAIL:=changeme@example.com}"
 
 #MySQL Install command
-sudo mysql < ../sql/install.sql
-sudo mysql < ../sql/yesphpmyadmin.sql
+(cd ..; sudo mysql < sql/install.sql)
+(cd ..; sudo mysql < sql/yesphpmyadmin.sql)
 
 #WP CLI
     #MKDIR LOCATION
-sudo chmod -R g+s /var/www
-sudo chmod -R 777 /var/www
+
 mkdir /var/www/html/${LOCATION}
 sudo chmod -R g+s /var/www/html/${LOCATION}
 sudo chmod -R 777 /var/www/html/${LOCATION}
@@ -91,5 +90,22 @@ sudo chmod 644 /var/www/html/${LOCATION}/wp-config.php
     #Install WordPress
 (cd /var/www/html/${LOCATION}; wp core install --url=${URL} --title=${WP_Title} --admin_name=${WP_USER} --admin_password=${WP_PW} --admin_email=${WP_EMAIL})
 
-#Acces WordPress
+#WordPress is UP
 echo "Wordpress shoud be listening on http://$URL"
+
+#Ask if FTP already installed
+read -p "Do you have already installed and or configured an FTP server (yes/no) " yn
+
+case $yn in 
+	yes ) echo ok, we will proceed;;
+    y ) echo ok, we will proceed;;    
+    Y ) echo ok, we will proceed;;
+	no ) echo "Installation done";
+		exit;;
+    n ) echo "Installation done";
+		exit;;    
+    N ) echo "Installation done";
+		exit;;
+	* ) echo invalid response;
+		exit 1;;
+esac

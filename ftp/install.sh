@@ -26,9 +26,8 @@ USERNAME="${USERNAME:=websrv_user}"
 echo "What PAssword shoud the FTP Account have (has to be entert once again later |default: websrv_user) "
 read PW
 PW="${PW:=websrv_user}"
- #Install Prod FTP
 
- sudo apt update
+ #Install Prod FTP
  sudo apt install proftpd
 
  #Add User
@@ -43,12 +42,8 @@ AuthPAM off
 RequireValidShell off"
 ) >> /etc/proftpd/proftpd.conf
 
-#Restart FTP 
-sudo /etc/init.d/proftpd restart
 
-#Chmod Var WWW
-sudo chmod g+s /var/www
-sudo chmod 777 /var/www
+#Restart FTP 
 sudo /etc/init.d/proftpd restart
 
 
@@ -56,7 +51,7 @@ sudo /etc/init.d/proftpd restart
     #INstall Crypto
 #sudo apt install proftpd-mod-crypto
 
-#Edit MOdules File
+#Edit Modules File
 
 #sudo sed -i '/ mod_tls.c /s/^/#/' /etc/proftpd/modules.conf
 #sudo sed -i '/ mod_tls_fscache.c /s/^/#/' /etc/proftpd/modules.conf
@@ -79,4 +74,4 @@ sudo /etc/init.d/proftpd restart
 #</IfModule>") > /etc/proftpd/conf.d/tls.conf
 
 #Restart Service 
-sudo /etc/init.d/proftpd restart
+#sudo /etc/init.d/proftpd restart
