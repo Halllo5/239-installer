@@ -25,14 +25,16 @@ PW="${PW:=websrv_user}"
  sudo apt install proftpd
 
  #Add User
- sudo ftpasswd --passwd ${PW} --name ${USERNAME} --gid 33 --uid 33 --home /var/www/ --shell /bin/false
+ (cd /etc/proftpd/; sudo ftpasswd --passwd ${PW} --name ${USERNAME} --gid 33 --uid 33 --home /var/www/ --shell /bin/false)
+ 
 
 #Edit cofig
 (sudo cat /etc/proftpd/proftpd.conf; echo "DefaultRoot ~
 AuthOrder mod_auth_file.c mod_auth_unix.c
 AuthUserFile /etc/proftpd/ftpd.passwd
 AuthPAM off
-RequireValidShell off") > /etc/proftpd/proftpd.conf
+RequireValidShell off"
+) > /etc/proftpd/proftpd.conf
 
 #Restart FTP 
 sudo /etc/init.d/proftpd restart
