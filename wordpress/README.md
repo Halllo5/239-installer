@@ -1,1 +1,0 @@
-# Simple script to Install and uninstall Wordpress with an apache Webserver
