@@ -10,6 +10,17 @@ echo "                                                                          
 echo "                                                                                                  ";
 
 
+#Check if APT is installed
+if ! command -v apt &> /dev/null
+then
+    echo "APT Could not be found"
+    echo "Be sure to install APT or use a Linux Disto wich has it installed by default"
+    echo "This script was only testet on Ubuntu Server 22.04 LTS (Raspberry Pi 4B 8GB)"
+    echo "Bye bye"
+
+    exit
+fi
+
 #Chck if MySQL and WordPress CLI is installed
 if ! command -v apache2 &> /dev/null
 then
@@ -41,7 +52,7 @@ fi
 #Deactivate MySQL PW Policy
 sudo mysql < sql/nopolicy.sql
 
-
+echo "!!!vDo you want to install phpMyAdmin (Recomended) otherwies you will have to create a MySQL Account with all rights by yourself!!!"
 read -p "Do you want to proceed? (yes/no) " yn
 
 case $yn in 
@@ -51,4 +62,3 @@ case $yn in
 	* ) echo invalid response;
 		exit 1;;
 esac
-

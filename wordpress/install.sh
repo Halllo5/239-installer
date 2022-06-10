@@ -23,8 +23,16 @@ then
     echo "bye se you soon"
     exit
 fi
+#Ask if phpMyAdmin or MySQL account 
+read -p "Do you have phpMyAdmin installed or already created a MySQL Account (yes/no) " yn
 
-
+case $yn in 
+	yes ) echo ok, we will proceed;;
+	no ) echo "Please create a MySQL account or re-run the installer and install phpMyAdmin";
+		exit;;
+	* ) echo invalid response;
+		exit 1;;
+esac
 #questions to get infos for the wordpress instance
     #Ask DB_USER
 echo "What is the MySQL_DB User to use with the wordpress DB wich will be created (REQUIERD) "
