@@ -94,7 +94,7 @@ sudo chmod 644 /var/www/html/${LOCATION}/wp-config.php
 echo "Wordpress shoud be listening on http://$URL"
 
 #Ask if FTP already installed
-read -p "Do you have already installed and or configured an FTP server (yes/no) " yn
+read -p "Do you want to install FTP (recomended) (yes/no) " yn
 
 case $yn in 
 	yes ) echo ok, we will proceed;;
