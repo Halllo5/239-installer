@@ -28,7 +28,7 @@ read PW
 PW="${PW:=websrv_user}"
 
  #Install Prod FTP
- sudo apt install proftpd
+ sudo apt -y install proftpd
 
  #Add User
  (cd /etc/proftpd/; sudo ftpasswd --passwd ${PW} --name ${USERNAME} --gid 33 --uid 33 --home /var/www/ --shell /bin/false)

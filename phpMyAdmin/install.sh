@@ -1,5 +1,5 @@
 #!/bin/bash
 #install phpMyAdmin
-sudo apt-get install mcrypt 
+sudo apt-get -y install mcrypt 
 sudo service apache2 restart 
-sudo apt-get install phpmyadmin 
+sudo apt-get -y install phpmyadmin 

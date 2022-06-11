@@ -1,4 +1,4 @@
 #!/bin/bash
 #install phpMyAdmin
-sudo apt purge mcrypt 
-sudo apt purge phpmyadmin 
+sudo apt -y purge mcrypt 
+sudo apt -y purge phpmyadmin 

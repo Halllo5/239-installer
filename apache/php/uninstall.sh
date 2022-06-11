@@ -1,4 +1,4 @@
 #!/bin/bash
 
 #Revers Install ;)
-sudo apt purge php libapache2-mod-php php-mysql
+sudo apt -y purge php libapache2-mod-php php-mysql

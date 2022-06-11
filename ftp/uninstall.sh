@@ -9,5 +9,5 @@ echo "██         ██    ██           ██████  ██   █
 echo "                                                                                                                      ";
 echo "                                                                                                                      ";
 
-sudo apt purge proftpd-core
+sudo apt -y purge proftpd-core
 echo "ProFTPd shoud be removed form your machine"

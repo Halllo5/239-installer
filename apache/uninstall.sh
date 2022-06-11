@@ -1,4 +1,4 @@
 #!/bin/bash
 
 #It just runs APT purge
-sudo apt purge apache2
+sudo apt -y purge apache2

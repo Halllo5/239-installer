@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Install php
-sudo apt install php libapache2-mod-php php-mysql
+sudo apt -y install php libapache2-mod-php php-mysql
 
 #Enable/disable modules
 sudo a2dismod mpm_event && sudo a2enmod mpm_prefork 

@@ -68,8 +68,8 @@ read WP_EMAIL
 WP_EMAIL="${WP_EMAIL:=changeme@example.com}"
 
 #MySQL Install command
-sudo mysql < sql/install.sql
-sudo mysql < sql/yesphpmyadmin.sql
+sudo mysql < install.sql
+sudo mysql < yesphpmyadmin.sql
 
 #WP CLI
     #MKDIR LOCATION
