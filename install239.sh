@@ -44,13 +44,13 @@ then
     exit
 fi
 #Install Apache
-(cd ..; ./apache/install.sh)
+./apache/install.sh
 #Install MySQL
-(cd ..; ./sql/install.sh)
+./sql/install.sh
 #Install PHP
-(cd ..; ./apache/php/install.sh)
+./apache/php/install.sh
 #Install the WP CLI
-(cd ..; ./wordpress/cli/install.sh) 
+./wordpress/cli/install.sh
 
 
 #Deactivate MySQL PW Policy
