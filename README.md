@@ -122,12 +122,12 @@ sudo /etc/init.d/proftpd restart
 ## Configure E-Mail (msmtp)
 1. If the Script starts you need to enter a few simple questions 
 2. Important is here that if your using G-Mail or Icloud you need a app specific password
-Gmail: 
-  -SMPT Host: smtp.gmail.com
-  -App Specific PW: https://support.google.com/accounts/answer/6010255
-Icloud:
-  -SMPT Host: smtp.mail.me.com
-  -App Specific PW: https://support.apple.com/en-us/HT204397
+>Gmail: 
+>  -SMPT Host: smtp.gmail.com
+>  -App Specific PW: https://support.google.com/accounts/answer/6010255
+>Icloud:
+>  -SMPT Host: smtp.mail.me.com
+>  -App Specific PW: https://support.apple.com/en-us/HT204397
 
 
 ### Configure PHP Mail
