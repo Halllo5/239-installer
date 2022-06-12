@@ -6,11 +6,12 @@
 
 ## Know Issues
 
----
 
 **phpMyAdmin and WordPress do not work with a reverse proxy at the moment**
 
 **FTP is currently not encrypted**.
+
+---
 
 ## How to install
 
@@ -120,4 +121,4 @@ sudo /etc/init.d/proftpd restart
 
 ---
 
-#### This is not a complete script, but I will try to improve things so that at least the available functions work
+#### This is not a complete script, but it should install the basics fairly reliably 
