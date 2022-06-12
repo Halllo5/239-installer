@@ -45,9 +45,9 @@ echo "what is the Location for the wordpress Site (/var/www/html/"what you need 
 read LOCATION
 LOCATION="${LOCATION:=wordpress}"
     #Ask Wordpress URL
-echo "what is the url for the wordpress Site (Without the location ) (default: localhost)"
+echo "what is the url for the wordpress Site (Without the location ) (default: http://localhost)"
 read URL
-URL="${URL:=localhost}"
+URL="${URL:=http://localhost}"
 URL="$URL/$LOCATION"
 
     #Ask Title for WP Site
