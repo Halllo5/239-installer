@@ -131,12 +131,12 @@ Icloud:
 
 
 ### Configure PHP Mail
-1. To configure it we need edit the PHP configuration wich we can du like this
-Note: Your php verison could be diffrent wich means you would need to change the veriosn number in the path down below insted of [8.1] your number
+1. To configure it, we need to edit the PHP configuration, which we can do as follows.
+Note: Your PHP version might be different, which means you need to change the version number in the path below from [8.1] to your version number.
 ```bash
 sudo nano /etc/php/8.1/apache2/php.ini
 ```
-2. Then finde the following line and change the configuration to be exactly the same
+2. Then find the following line and change the configuration so that it is exactly the same
 ```
 [mail function]
 ; For Win32 only.
@@ -148,7 +148,7 @@ sudo nano /etc/php/8.1/apache2/php.ini
 i").
 sendmail_path = "/usr/bin/msmtp -t" 
 ```
-3. And finaly restart the Web-Server
+3. And finally restart the web server
 ```bash
 sudo systemctl restart apache2
 ```
