@@ -10,7 +10,7 @@
 
 **phpMyAdmin and WordPress do not work with a reverse proxy at the moment**
 
-**FTP is currently not encrypted**.
+
 
 ## How to install
 
