@@ -81,7 +81,7 @@ chmod 777 installer239.sh
 
 1. First you will have to activate the Modules wich you can by removig the comments before the
   
-2. ```bash
+ ```bash
   sudo nano /etc/proftpd/modules.conf
   
   #These lines need to be uncommented 
@@ -91,7 +91,7 @@ chmod 777 installer239.sh
   
   ```
   
-3. After that you need to add the following lines at the end of the configuration
+2. After that you need to add the following lines at the end of the configuration
   
 
 ```bash
@@ -111,7 +111,7 @@ TLSOptions NoSessionReuseRequired
 </IfModule>
 ```
 
-4. And finally restart the FTP server
+3. And finally restart the FTP server
   
 
 ```bash
