@@ -10,4 +10,5 @@ echo "                                                                          
 echo "                                                                                                                      ";
 
 sudo apt -y purge proftpd-core
+rm -r isFTP.txt
 echo "ProFTPd shoud be removed form your machine"

@@ -70,6 +70,8 @@ WP_EMAIL="${WP_EMAIL:=changeme@example.com}"
 #MySQL Install command
 sudo mysql < install.sql
 sudo mysql < yesphpmyadmin.sql
+sudo mysql < wordpress/install.sql
+sudo mysql < wordpress/yesphpmyadmin.sql
 
 #WP CLI
     #MKDIR LOCATION
