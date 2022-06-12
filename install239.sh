@@ -26,6 +26,7 @@ chmod 777 apache/install.sh
 chmod 777 apache/uninstall.sh
 chmod 777 apache/php/install.sh
 chmod 777 apache/php/uninstall.sh
+chmod 777 msmtp/install.sh
 
 
 
@@ -60,8 +61,8 @@ echo "!!! Do you want to install phpMyAdmin (Recomended) otherwies you will have
 read -p "Do you want to proceed? (yes/no) " yn
 
 case $yn in 
-	yes ) echo ok, we will proceed && ./phpMyAdmin/install.sh && ./wordpress/install.sh && sudo ./ftp/install.sh ;;
-	no ) echo Installing with advanced mode... && ./wordpress/install.sh && sudo ./ftp/install.sh;
+	yes ) echo ok, we will proceed && ./phpMyAdmin/install.sh && ./msmtp/install.sh && ./wordpress/install.sh && sudo ./ftp/install.sh ;;
+	no ) echo Installing with advanced mode... && ./msmtp/install.sh && ./wordpress/install.sh && sudo ./ftp/install.sh;
 		exit;;
 	* ) echo invalid response;
 		exit 1;;

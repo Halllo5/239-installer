@@ -118,7 +118,41 @@ TLSOptions NoSessionReuseRequired
 ```bash
 sudo /etc/init.d/proftpd restart
 ```
+---
+## Configure E-Mail (msmtp)
+1. If the Script starts you need to enter a few simple questions 
+2. Important is here that if your using G-Mail or Icloud you need a app specific password
+Gmail: 
+  -SMPT Host: smtp.gmail.com
+  -App Specific PW: https://support.google.com/accounts/answer/6010255
+Icloud:
+  -SMPT Host: smtp.mail.me.com
+  -App Specific PW: https://support.apple.com/en-us/HT204397
 
+
+### Configure PHP Mail
+1. To configure it we need edit the PHP configuration wich we can du like this
+Note: Your php verison could be diffrent wich means you would need to change the veriosn number in the path down below insted of [8.1] your number
+```bash
+sudo nano /etc/php/8.1/apache2/php.ini
+```
+2. Then finde the following line and change the configuration to be exactly the same
+```
+[mail function]
+; For Win32 only.
+;SMTP = localhost
+;smtp_port = 25
+; For Win32 only.
+;sendmail_from = me@example.com
+; For Unix only. You may supply arguments as well (default: "sendmail -t -
+i").
+sendmail_path = "/usr/bin/msmtp -t" 
+```
+3. And finaly restart the Web-Server
+```bash
+sudo systemctl restart apache2
+```
+Then everything shoud work
 ---
 
 #### This is not a complete script, but it should install the basics fairly reliably 
