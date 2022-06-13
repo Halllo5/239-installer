@@ -54,26 +54,28 @@ chmod 777 installer239.sh
 7. Then it soud ask you if you want to **configure a Database** wich you need to awnser with **yes**
   
 8. Then you need to enter a password, which you need to remember because you will need to enter it later for the WordPress installation.
+
+9. [After that it shoud procede with the E-Mail Configuration](#configure-e-mail-msmtp)
   
-9. After that the WordPress Installation shoud start
+10. After that the WordPress Installation shoud start
   
-10. First you will be asked if you have a DB user, which you can answer in the affirmative if you have installed phpMyAdmin or created one previously
+11. First you will be asked if you have a DB user, which you can answer in the affirmative if you have installed phpMyAdmin or created one previously
   
-11. After that you will be asked for a `DB_User` which you can enter (if you have phpMyAdmin installed this would be `phpmyadmin`)
+12. After that you will be asked for a `DB_User` which you can enter (if you have phpMyAdmin installed this would be `phpmyadmin`)
   
-12. After that, you will be asked for a password that you have previously chosen
+13. After that, you will be asked for a password that you have previously chosen
   
-13. Now you will be asked for the location where Wordpress should be installed (it is always located in the `/var/www/html` directory), the default is `wordpress`.
+14. Now you will be asked for the location where Wordpress should be installed (it is always located in the `/var/www/html` directory), the default is `wordpress`.
+
+15. The next step requires a URL, which by default is http://localhost (you do not need to enter the location "the / Path", it is automatically derived from the location entered above). Note that I **didnt get wordpress working behind an Nginx reverse proxy**
   
-14. The next step requires a URL, which by default is http://localhost (you do not need to enter the location "the / Path", it is automatically derived from the location entered above). Note that I **didnt get wordpress working behind an Nginx reverse proxy**
+16. After that you will be asked some questions about the configuration of Wordpress (all of which you can change directly in Wordpress after installation)
   
-15. After that you will be asked some questions about the configuration of Wordpress (all of which you can change directly in Wordpress after installation)
+17. Then you will be asked if you want to install **FTP**, which is **highly recommended**.
   
-16. Then you will be asked if you want to install **FTP**, which is **highly recommended**.
+18. When the FTP installer starts, you will be asked for an FTP account, which will be created.
   
-17. When the FTP installer starts, you will be asked for an FTP account, which will be created.
-  
-18. After FTP is configured, you will be asked if you want to configure **SFTP** (which **requires manual configuration**)
+19. After FTP is configured, you will be asked if you want to configure **SFTP** (which **requires manual configuration**)
   
 
 ---
