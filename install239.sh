@@ -65,6 +65,6 @@ case $yn in
 	no ) echo "Installing in advanced mode (no phpMyAdmin)..." && ./msmtp/install.sh && ./wordpress/install.sh && sudo ./ftp/install.sh;
 		exit;;
 	* ) echo "Invalid Response Please Re-Run the Script";
-        echo "exiting...."
+        echo "exiting....";
 		exit 1;;
 esac
