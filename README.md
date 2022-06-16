@@ -35,7 +35,7 @@ cd 239-installer
 
 
 
-chmod 777 installer239.sh
+chmod 755 installer239.sh
 
 
 

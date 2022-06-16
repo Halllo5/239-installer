@@ -12,21 +12,21 @@ echo "                                                                          
 
 
 #Edit Premmisions of all Files
-chmod 777 uninstall239.sh
-chmod 777 wordpress/install.sh
-chmod 777 wordpress/uninstall.sh
-chmod 777 wordpress/cli/install.sh
-chmod 777 sql/install.sh
-chmod 777 sql/uninstall.sh
-chmod 777 phpMyAdmin/install.sh
-chmod 777 phpMyAdmin/uninstall.sh
-chmod 777 ftp/install.sh
-chmod 777 ftp/uninstall.sh
-chmod 777 apache/install.sh
-chmod 777 apache/uninstall.sh
-chmod 777 apache/php/install.sh
-chmod 777 apache/php/uninstall.sh
-chmod 777 msmtp/install.sh
+chmod 755 uninstall239.sh
+chmod 755 wordpress/install.sh
+chmod 755 wordpress/uninstall.sh
+chmod 755 wordpress/cli/install.sh
+chmod 755 sql/install.sh
+chmod 755 sql/uninstall.sh
+chmod 755 phpMyAdmin/install.sh
+chmod 755 phpMyAdmin/uninstall.sh
+chmod 755 ftp/install.sh
+chmod 755 ftp/uninstall.sh
+chmod 755 apache/install.sh
+chmod 755 apache/uninstall.sh
+chmod 755 apache/php/install.sh
+chmod 755 apache/php/uninstall.sh
+chmod 755 msmtp/install.sh
 
 
 
