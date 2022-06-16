@@ -57,6 +57,7 @@ fi
 echo "Do you want to configure SFTP (Manual configuration needed)"
 echo "Please refer to the Documentation"
 echo "https://github.com/Halllo5/239-installer"
+
 case "$choice" in 
   y|Y ) echo "Starting the Instalation....." && sudo apt install proftpd-mod-crypto && sudo openssl req -x509 -newkey rsa:2048 -keyout /etc/ssl/private/proftpd.key -out /etc/ssl/certs/proftpd.crt -nodes -days 365;;
   n|N ) echo "SFTP will not be configured" && exit;;

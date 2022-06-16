@@ -80,5 +80,5 @@ echo "Your message" | msmtp recipient@adresse.com" | sudo msmtp $AEMAIL
 echo "A test E-Mail has been sent to your admin E-Mail if you recive this E-Mail it means that it was configured corectly"
 
 echo "Warning If you want to use php to send mails please refere to the README"
-echo"https://github.com/Halllo5/239-installer#readme"
+echo "https://github.com/Halllo5/239-installer#readme"
 fi
