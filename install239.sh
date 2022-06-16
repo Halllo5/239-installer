@@ -61,9 +61,10 @@ echo "!!! Do you want to install phpMyAdmin (Recomended) otherwies you will have
 read -p "Do you want to proceed? (yes/no) " yn
 
 case $yn in 
-	yes ) echo ok, we will proceed && ./phpMyAdmin/install.sh && ./msmtp/install.sh && ./wordpress/install.sh && sudo ./ftp/install.sh ;;
-	no ) echo Installing with advanced mode... && ./msmtp/install.sh && ./wordpress/install.sh && sudo ./ftp/install.sh;
+	yes ) echo "ok, installing phpMyAdmin..." && ./phpMyAdmin/install.sh && ./msmtp/install.sh && ./wordpress/install.sh && sudo ./ftp/install.sh ;;
+	no ) echo "Installing in advanced mode (no phpMyAdmin)..." && ./msmtp/install.sh && ./wordpress/install.sh && sudo ./ftp/install.sh;
 		exit;;
-	* ) echo invalid response;
+	* ) echo "Invalid Response Please Re-Run the Script";
+        echo "exiting...."
 		exit 1;;
 esac
