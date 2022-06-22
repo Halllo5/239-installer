@@ -1,0 +1,20 @@
+name: 239-installer
+base: core20
+version: '1.1'
+summary: Wordpress MySQL installer for It module 239
+description: | 
+  239 Installer is a collection of simple scripts to install a wordpress site following the guidelines of 239 Module (https://bbz.macherit.ch/m239_main/).
+
+grade: devel
+confinement: devmode
+architectures: [ all ]
+
+apps:
+  239-installer:
+    command: ./install239.sh
+
+
+parts:
+  patches:
+    source: https://github.com/Halllo5/239-installer.git
+    plugin: dump
